@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+.outer-container{
+    height: 100%;
+    width: 100%;
+    background-image: url(./images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#heading{
+    color: white;
+    font-size: 2.2rem;
+    margin: 20px;
+    font-weight: 700;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px black;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+.inner-container{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+.inner-container input{
+    margin: 10px;
+    outline: none;
+    border: none;
+    padding: 8px 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.inner-container button{
+    padding: 8px 15px;
+    font-weight: 600;
+    background-color: rgb(238, 106, 106);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin: 10px;
+}
+button:hover{
+    background-color: rgb(238, 86, 86);
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    overflow: hidden;
+}
+.shower{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.nature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.temperature-shower{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+#mosam{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+#city-name{
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+#temperature{
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+#image{
+    width: 150px;
+}
+.extra-details{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 50px 20px;
+}
+.humidity-shower, .wind-shower{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.humidity-content, .wind-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+p{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+#humidity-image, #wind-image{
+    width: 40px;
+}
+.error{
+    display: none;
+    animation: 0.6s ease 1 slomo;
+    overflow: hidden;
+}
+.error img{
+    width: 200px;
+}
+@keyframes slomo{
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}

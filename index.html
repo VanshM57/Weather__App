@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="outer-container">
+        <h2 id="heading">Weather App</h2>
+        <div class="main-container">
+            <div class="inner-container">
+                <input type="text" placeholder="Enter a city">
+                <button>Get Weather</button>
+            </div>
+            <div class="error">
+                
+                <img src="./images/404.png" alt="">
+                <p>Oops! Location not found</p>
+                
+            </div>
+            <div class="details">
+                <div class="shower">
+                    <div class="nature">
+                        <img src="" alt="" id="image">
+                        <p id="mosam"></p>
+                    </div>
+                    <div class="temperature-shower">
+                        <h3 id="city-name"></h3>
+                        <h3 id="temperature"></h3>
+                    </div>
+                </div>
+                <div class="extra-details">
+                    <div class="humidity-shower">
+                        <img src="" alt="" id="humidity-image">
+                        <div class="humidity-content">
+                            <p id="humidity-name"></p>
+                            <p id="humidity"></p>
+                        </div>
+                        
+                    </div>
+                    <div class="wind-shower">
+                        <img src="" alt="" id="wind-image">
+                        <div class="wind-content">
+                            <p id="wind-name"></p>
+                            <p id="wind-speed"></p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
