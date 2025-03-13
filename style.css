@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -148,5 +148,247 @@ p{
     }
     to{
         transform: translateY(0%);
+    }
+} */
+
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Outer container with 3D Glassmorphism Effect */
+.outer-container {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2),
+                inset 5px 5px 15px rgba(255, 255, 255, 0.1);
+    animation: fadeIn 1s ease-in-out;
+    transform-style: preserve-3d;
+    transition: all 0.3s ease;
+}
+
+/* Heading with Glow Effect */
+#heading {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+}
+
+/* Input & Button Container */
+.inner-container {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Input Field with Animation */
+.inner-container input {
+    flex: 1;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+.inner-container input::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+/* Input Focus Effect */
+.inner-container input:focus {
+    border-color: rgba(255, 255, 255, 0.7);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Button with Hover Animation */
+.inner-container button {
+    padding: 12px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff6b6b, #ff4757);
+    color: white;
+    transition: 0.3s;
+    box-shadow: 3px 3px 10px rgba(255, 0, 0, 0.3);
+}
+
+.inner-container button:hover {
+    background: linear-gradient(135deg, #ff4757, #e84118);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+}
+
+/* Weather Details */
+.details {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.8s forwards;
+}
+
+/* Weather Icons & Text */
+.nature img {
+    width: 120px;
+    animation: float 3s infinite ease-in-out;
+}
+
+#mosam, #city-name, #temperature {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Extra Weather Details */
+.extra-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.1);
+    animation: slideUp 1s ease-in-out;
+}
+
+/* Humidity & Wind Info */
+.humidity-shower, .wind-shower {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.humidity-content, .wind-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+}
+
+#humidity-image, #wind-image {
+    width: 40px;
+}
+
+/* Error Message */
+.error {
+    display: none;
+    text-align: center;
+    animation: slomo 0.6s ease-in-out;
+}
+
+.error img {
+    width: 200px;
+}
+
+.error p {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slomo {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .outer-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .inner-container {
+        flex-direction: column;
+    }
+
+    .inner-container input {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .inner-container button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .extra-details {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 }
