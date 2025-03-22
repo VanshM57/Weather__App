@@ -217,6 +217,7 @@ body {
     transition: 0.3s ease-in-out;
 }
 
+
 .inner-container input::placeholder {
     color: white;
     opacity: 0.7;
@@ -392,3 +393,4 @@ body {
         gap: 10px;
     }
 }
+
